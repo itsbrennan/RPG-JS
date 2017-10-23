@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dueling chaps</title>
+	<script src="duel.js"></script>
+	<!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script> --></head>
+
+<body>
+
+	<h3>Opponent's Health: <span id ="opponent-health">10</span></h3>
+	<p> Total Losses: <span id = "opponent-loss-counter"> 0 </span></p>
+
+	<h3>Player's Health: <span id ="player-health">40</span></h3>
+	<p> Total Losses: <span id = "player-loss-counter"> 0 </span></p>
+
+	<button id="attack-button" onclick="attack()">Attack</button>
+	<button id ="restart-button" hidden = "true" onclick="restart()">Fight Again</button>
+
+	<h3 id ="game-message"></h3>
+
+</body>
+
+</html>
