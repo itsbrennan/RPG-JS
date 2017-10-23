@@ -1,5 +1,4 @@
 
-
 // defining player and opponent variables
 
 let player = {
