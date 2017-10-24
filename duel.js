@@ -14,10 +14,10 @@ let opponent = {
   // losses: 0;
 }
 
-
 let opponentLossCounter = 0;
 
 let playerLossCounter = 0;
+
 
 
 // while (opponentLossCounter < 3) {
@@ -25,16 +25,51 @@ let playerLossCounter = 0;
 //   attack();
 // }
 
+
+const wantToPlay = () => { 
+
+let attackButton = document.getElementById('wantToPlay-button');
+userAnswer = confirm("Do you want to attack?");
+
+    if (userAnswer === true){
+      let attackButton = document.getElementById('attack-button').hidden = false;
+      let wantToPlay = document.getElementById('wantToPlay-button').hidden = true;
+      
+      enterName();
+
+    } else {
+
+      // break;
+
+    }
+
+}
+
+// wantToPlay();
+
+// const wantToPlay = () => {
+
+//   let userAnswer = confirm("Would you like to play the game?");
+//   return userAnswer;
+// }
+
+// if (userAnswer === true){
+//   attackButton.disabled = true;
+// }
+
 const attack = () => {
+
+  debugger;
 
   let attackButton = document.getElementById('attack-button');
   let restartButton = document.getElementById('restart-button');
   let gameMessage = document.getElementById('game-message');
 
-
+  // Player's attack power is being defined and then subtracted to the opponents health
   let playerAttack = determineAttackPower(player.power);
     opponent.health -= playerAttack;
     printToScreen();
+
 
     if (isGameOver(opponent.health)){
         endGame("Player Won the Fight!");
@@ -60,18 +95,29 @@ const attack = () => {
 
     }
 
-
       attackButton.disabled = false;
-
+    
+    // this is where the delay is defined
     }, 250);
 
 }
+
+// name prompt 
+const enterName = (name) => {
+
+  return prompt("Enter your name brave fighter!");
+
+}
+
+
 
 const endGame = (message) => {
 
   let gameMessage = document.getElementById('game-message').innerText = message;
   let attackButton = document.getElementById('attack-button').hidden = true;
   let restartButton = document.getElementById('restart-button').hidden = false;}
+
+
 
 const determineAttackPower = (power) => { 
 
@@ -86,7 +132,7 @@ const restart = () => {
 
   let attackButton = document.getElementById('attack-button');
 
-  player.health = 40;
+  // player.health = 40;
   opponent.health = 10;
   document.getElementById('game-message').innerText = "";
   attackButton.disabled = false;
@@ -107,3 +153,6 @@ const printToScreen = () => {
   document.getElementById('player-loss-counter').innerText = playerLossCounter;
   }
 printToScreen();
+
+
+
