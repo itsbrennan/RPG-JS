@@ -3,9 +3,8 @@
 
 let player = {
   health:40,
-  power: 5
-  // losses: 0;
-  // wins:
+  power: 5,
+  name: "Your Name"
 }
 
 let opponent = {
@@ -28,8 +27,8 @@ let playerLossCounter = 0;
 
 const wantToPlay = () => { 
 
-let attackButton = document.getElementById('wantToPlay-button');
-userAnswer = confirm("Do you want to attack?");
+  let attackButton = document.getElementById('wantToPlay-button');
+  userAnswer = confirm("Do you want to attack?");
 
     if (userAnswer === true){
       let attackButton = document.getElementById('attack-button').hidden = false;
@@ -45,17 +44,6 @@ userAnswer = confirm("Do you want to attack?");
 
 }
 
-// wantToPlay();
-
-// const wantToPlay = () => {
-
-//   let userAnswer = confirm("Would you like to play the game?");
-//   return userAnswer;
-// }
-
-// if (userAnswer === true){
-//   attackButton.disabled = true;
-// }
 
 const attack = () => {
 
@@ -102,10 +90,13 @@ const attack = () => {
 
 }
 
+
 // name prompt 
 const enterName = () => {
 
-  let playerName = prompt("Enter your name brave fighter!");
+  player.name = prompt("Enter your name brave fighter!");
+
+
   printToScreen();
 }
 
@@ -151,8 +142,10 @@ const printToScreen = () => {
   document.getElementById('opponent-loss-counter').innerText = opponentLossCounter;
 
 
+  document.getElementById('player-name').innerText = player.name;
   document.getElementById('player-health').innerText = player.health;
   document.getElementById('player-loss-counter').innerText = playerLossCounter;
+
   }
 printToScreen();
 
