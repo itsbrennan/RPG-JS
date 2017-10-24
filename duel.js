@@ -103,11 +103,12 @@ const attack = () => {
 }
 
 // name prompt 
-const enterName = (name) => {
+const enterName = () => {
 
-  return prompt("Enter your name brave fighter!");
-
+  let playerName = prompt("Enter your name brave fighter!");
+  printToScreen();
 }
+
 
 
 
@@ -148,6 +149,7 @@ const restart = () => {
 const printToScreen = () => {
   document.getElementById('opponent-health').innerText = opponent.health;
   document.getElementById('opponent-loss-counter').innerText = opponentLossCounter;
+
 
   document.getElementById('player-health').innerText = player.health;
   document.getElementById('player-loss-counter').innerText = playerLossCounter;
