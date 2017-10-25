@@ -18,6 +18,8 @@ let opponent = {
 
 
 // Game increment counters
+// storing loss counters & attacks for both players for summary view
+
 let opponentLossCounter = 0;
 
 let playerLossCounter = 0;
@@ -44,8 +46,15 @@ const startGame = () => {
       let healButton = document.getElementById('heal-button').hidden = false;
       let quitButton = document.getElementById('quit-button').hidden = false;
       let startGame = document.getElementById('startGame-button').hidden = true;
-      
+      let playAgainButton = document.getElementById('playAgain-button').hidden = true;
+      let gameMessage = document.getElementById('game-message');
+
+      attackButton.disabled = false;
+      healButton.disabled = false;
+
+
       enterName();
+      // printToScreen();
 
     } else {
 
@@ -56,9 +65,18 @@ const startGame = () => {
 }
 
 
+// name prompt 
+const enterName = () => {
+
+  player.name = prompt("Enter your name brave fighter!");
+  healButton.disabled = false;
+  printToScreen();
+}
 
 
-const attack = () => {
+
+
+const startCombat = () => {
 
   debugger;
 
@@ -83,7 +101,7 @@ const attack = () => {
 
     attackButton.disabled = true;
     healButton.disabled = true;
-    gameMessage.innerText = "Opponent is about to strike!";
+    gameMessage.innerText = "Take that!!";
 
     // Opponent strikes back with 1 second timeout for realistic feel :)
 
@@ -96,8 +114,19 @@ const attack = () => {
 
       if (isGameOver(player.health)){
 
-        endGame("Opponent Won the Fight!");
-        
+        endGame("You've been defeated!! Now you must serve as my Surf for eternity!! (Muahhaha)");
+          let attackButton = document.getElementById('attack-button').hidden = true;
+          let restartButton = document.getElementById('restart-button').hidden = true;
+          let playAgainButton = document.getElementById('playAgain-button').hidden = false;
+          let healButton = document.getElementById('heal-button').hidden = true;
+          let quitButton = document.getElementById('quit-button').hidden = true;
+          fighterPropertyReset();
+          
+
+          printToScreen();
+
+
+        // storing loss counter for game summary
         return playerLossCounter++;
 
     }
@@ -105,18 +134,11 @@ const attack = () => {
       attackButton.disabled = false;
     
     // this is where the delay is defined
-    }, 250);
+    }, 500);
 
-}
+    healButton.disabled = false;
+    attackButton.disabled = false;
 
-
-// name prompt 
-const enterName = () => {
-
-  player.name = prompt("Enter your name brave fighter!");
-
-
-  printToScreen();
 }
 
 
@@ -146,6 +168,7 @@ const healPlayer = () =>{
     } else {
 
       let healButton = document.getElementById('heal-button').disabled = true;
+      healButton.hidden = true;
 
     }
 
@@ -187,21 +210,31 @@ const quitGame = () => {
   let healButton = document.getElementById('heal-button').hidden = true;
   let quitButton = document.getElementById('quit-button').hidden = true;
 
-  // player property reset
-  player.health = 40;
-  player.name = "Your Name";
-  player.attack = 0;
-  playerLossCounter = 0;
-  playerHealCounter = 2;
-
-  // opponent property reset
-  opponent.health = 10;
-  opponent.attack = 0;
-  opponentLossCounter =0;
-
-  // printToScreen();
+  fighterPropertyReset();
 
 }
+
+  const fighterPropertyReset = () => {
+
+          // player property reset
+          player.health = 40;
+          player.name = "Your Name";
+          player.attack = 0;
+          playerLossCounter = 0;
+          playerHealCounter = 2;
+
+          // opponent property reset
+          opponent.health = 10;
+          opponent.attack = 0;
+          opponentLossCounter =0;
+
+          }
+
+
+
+// const isTotalLossOver3 = (health) => {
+
+//   return health <= 0;}
 
 
 const printToScreen = () => {
@@ -211,6 +244,31 @@ const printToScreen = () => {
   document.getElementById('opponent-attack-counter').innerText = opponent.attack;
 
 
+  const gameWon = () => {
+
+    if (opponentLossCounter === 3){
+
+          let gameMessage = document.getElementById('game-message').innerText = "Luck is on your side! You've defeated The Great Grant Chirpus!!'";
+          let attackButton = document.getElementById('attack-button').hidden = true;
+          let restartButton = document.getElementById('restart-button').hidden = true;
+          let playAgainButton = document.getElementById('playAgain-button').hidden = false;
+          let healButton = document.getElementById('heal-button').hidden = true;
+          let quitButton = document.getElementById('quit-button').hidden = true;
+
+          fighterPropertyReset();
+          
+          printToScreen();
+
+          // return 
+     } else{
+
+     }
+
+   }
+
+
+   gameWon();
+
   document.getElementById('player-name').innerText = player.name;
   document.getElementById('player-health').innerText = player.health;
   document.getElementById('player-loss-counter').innerText = playerLossCounter;
@@ -218,6 +276,8 @@ const printToScreen = () => {
   document.getElementById('player-attack-counter').innerText = player.attack;
 
   }
+
+
 printToScreen();
 
 

@@ -18,7 +18,7 @@
 
 	<p>Total Attacks: <span id = "player-attack-counter"> 0 </span></p>
 
-	<p>Total Losses: <span id = "player-loss-counter"> 0 </span></p>
+	<p hidden="true">Total Losses: <span id = "player-loss-counter"> 0 </span></p>
 
 	<p>Heals Remaining: <span id = "heal-counter"> 0 </span></p>
 	
@@ -28,7 +28,9 @@
 
 	<button id="startGame-button" onclick="startGame()">Want to Play?</button>
 
-	<button id="attack-button" hidden = "true" onclick="attack()">Attack</button>
+	<button id="playAgain-button" onclick="startGame()" hidden="true">Want to Play Again?</button>
+
+	<button id="attack-button" hidden = "true" onclick="startCombat()">Attack</button>
 
 	<button id="heal-button" hidden = "true" onclick="healPlayer()">Heal Player</button>
 
