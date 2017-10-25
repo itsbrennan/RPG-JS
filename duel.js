@@ -69,8 +69,9 @@ const startGame = () => {
 const enterName = () => {
 
   player.name = prompt("Enter your name brave fighter!");
-  healButton.disabled = false;
   printToScreen();
+  healButton.disabled = false;
+  
 }
 
 
@@ -218,7 +219,7 @@ const quitGame = () => {
 
           // player property reset
           player.health = 40;
-          player.name = "Your Name";
+          // player.name = "Your Name";
           player.attack = 0;
           playerLossCounter = 0;
           playerHealCounter = 2;
