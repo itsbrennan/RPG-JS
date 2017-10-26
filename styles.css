@@ -4,21 +4,37 @@ font-family: Avenir;
 
 }
 
-button{
+.button-text {
 
 	background:none;
-  border:none;
-  font-size:1em
+  	border:none;
+  	font-size:40px;
+  	font-weight: bold;
+  	color:#FFA9BB;
+  	padding: 20px;
+  	cursor: pointer;
+  	padding-bottom: 60px;
+
 }
 
+.action-dialogue {
+
+	/* Are you brave enough: */
+	font-family: Avenir-Medium;
+	font-size: 32px;
+	color: #4A4A4A;
+	
+}
+
+
 h1 {
-	font-size: 30px;
+	font-size: 48px;
 }
 
 h2 {
 	
 	font-family: Avenir;
-	font-size: 48px;
+	font-size: 40px;
 	font-weight: 500;
 	line-height: 1.75;
 	text-align: center;
@@ -31,7 +47,7 @@ h2 {
 h3 {
 	display: inline;
 	font-family: Avenir;
-	font-size: 40px;
+	font-size: 32px;
 	line-height: 1.33;
 	text-align: left;
 	color: #4a90e2;
@@ -60,7 +76,9 @@ h6 {
 	margin:0;
 }
 
-@media (max-width: 800px) {
+
+
+@media screen and (min-width: 800px) {
 
 h1 {
 	font-size: 50px;
@@ -203,7 +221,7 @@ h5{
 	height:10%;
 }
 
-hr.horizontal-rule {
+.horizontal-rule {
 	border: 1px solid #F2F2F2;
 	width: 100%;
 	padding: 10px, 0, 10px, 0;
@@ -232,8 +250,8 @@ hr.horizontal-rule {
 }
 
 .sub-head-items{
-	margin-left: 40px;
-	margin-right:40px;
+	margin-left: 20px;
+	margin-right:20px;
 	padding: 0;
 	margin-top: 0px;
 	padding-bottom: 20px;
@@ -259,6 +277,42 @@ hr.horizontal-rule {
 	align-items: center;
 
 }
+
+#action-buttons{
+
+	width: 100%;
+	
+
+
+}
+
+#heal-button{
+	justify-content: flex-start;
+	background: url(images/heal.svg);
+    cursor:pointer;
+    border:none;
+    width:136px;
+    height:125px;
+	box-shadow: 0 1px 8px 0 rgba(102,119,148,0.15);
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #F4F8FE;
+
+}
+
+#attack-button{
+	background: url(images/attack.svg);
+    cursor:pointer;
+    border:none;
+    width:136px;
+    height:125px;
+	box-shadow: 0 1px 8px 0 rgba(102,119,148,0.15);
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #F4F8FE;
+
+}
+
 
 .footer {
 	padding: 20px;

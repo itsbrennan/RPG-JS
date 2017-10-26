@@ -25,6 +25,7 @@
 
 
 	<!-- Name and Sub title -->
+	
 	<section class= "flex-container">
 
 		<div class = "flex-items-left">
@@ -99,21 +100,32 @@
 
 	<section class = "engagement-wrapper">
 
-		<button id="startGame-button">Want to Play?</button>
+		
+		<h3 class = "action-dialogue">Are you brave enough to fight The Great Grant Chirpus?</h3>
 
-		<button id="playAgain-button" hidden="true">Want to Play Again?</button>
+		<button id="startGame-button" class="button-text">want to play?</button>
 
-		<button id="attack-button" hidden = "true" onclick="startCombat()">Attack</button>
+		<button id="playAgain-button" hidden="true" class="button-text">want to play again?</button>
 
-		<button id="heal-button" hidden = "true" onclick="healPlayer()">Heal Player</button>
 
-		<button id ="restart-button" hidden = "true" onclick="restart()">Fight Again?</button>
 
-		<button id="quit-button" hidden = "true" onclick="quitGame()">Abandon Fight</button>
 
-		<h1 id = "action-dialogue">Are you brave enough to fight The Great Grant Chirpus?</h1>
+		<div id ="action-buttons">
 
-		<h1 id = "action-button">Click to Play</h1>
+			<button id="attack-button" class = "action-button" hidden = "true" onclick="startCombat()"></button>
+
+			<button id="heal-button" hidden = "true" onclick="healPlayer()"></button>
+
+		</div>
+		
+		<button id ="restart-button" class="button-text" hidden = "true" onclick="restart()">fight Again?</button>
+
+		
+
+		<button id="quit-button" class="button-text" hidden = "true" onclick="quitGame()">abandon fight</button>
+
+		
+
 
 	</section>
 
