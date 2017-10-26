@@ -3,7 +3,7 @@
 
 let player = {
   health:40,
-  power: 20,
+  power: 3,
   heal: 10,
   name: "Your Name",
   attack:0
@@ -37,7 +37,7 @@ const startGameButton = document.getElementById("startGame-button");
 
     startGameButton.onclick = startGame = () => {
 
-    // const startGame = () => { 
+
 
     printToScreen();
 
@@ -45,12 +45,15 @@ const startGameButton = document.getElementById("startGame-button");
   userAnswer = confirm("If you beat Grant Chirpus 3X, you claim the crown. If you lose, you must serve as a surf for the rest of your life. Are you sure you want to continue?");
 
     if (userAnswer === true){
+
+      let actionMessage = document.getElementById("action-dialogue").style.display = "none";
       let attackButton = document.getElementById('attack-button').hidden = false;
       let healButton = document.getElementById('heal-button').hidden = false;
       let quitButton = document.getElementById('quit-button').hidden = false;
       let startGame = document.getElementById('startGame-button').hidden = true;
       let playAgainButton = document.getElementById('playAgain-button').hidden = true;
       let gameMessage = document.getElementById('game-message');
+
 
       attackButton.disabled = false;
       // healButton.disabled = false;
@@ -81,7 +84,7 @@ const enterName = () => {
 
 const startCombat = () => {
 
-  debugger;
+  
 
   let attackButton = document.getElementById('attack-button');
   let restartButton = document.getElementById('restart-button');
@@ -273,6 +276,7 @@ const printToScreen = () => {
   document.getElementById('player-loss-counter').innerText = playerLossCounter;
   document.getElementById('heal-counter').innerText = playerHealCounter;
   document.getElementById('player-attack-counter').innerText = player.attack;
+
 
   }
 

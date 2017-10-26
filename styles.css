@@ -17,11 +17,10 @@ font-family: Avenir;
 
 }
 
-.action-dialogue {
+#action-dialogue {
 
-	/* Are you brave enough: */
 	font-family: Avenir-Medium;
-	font-size: 32px;
+	font-size: 24px;
 	color: #4A4A4A;
 	
 }
@@ -34,13 +33,13 @@ h1 {
 h2 {
 	
 	font-family: Avenir;
-	font-size: 40px;
+	font-size: 36px;
 	font-weight: 500;
 	line-height: 1.75;
 	text-align: center;
 	color: #4a4a4a;
 	margin:0;
-	padding: 20px;
+	padding: 10px;
 }
 
 
@@ -81,7 +80,7 @@ h6 {
 @media screen and (min-width: 800px) {
 
 h1 {
-	font-size: 50px;
+	font-size: 40px;
 }
   
 h2 {
@@ -133,9 +132,10 @@ h5{
 
 
 #sun {
-	height: 15vw;
+	height: 5vw;
 	flex-direction: row;
 	text-align: center;
+	padding-bottom: 50px;
 
 
 }
@@ -281,6 +281,9 @@ h5{
 #action-buttons{
 
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 	
 
 
@@ -323,7 +326,7 @@ h5{
 	/* Made with love by Br: */
 	font-family: Avenir-Book;
 	font-weight: 200;
-	font-size: 10px;
+	font-size: 16px;
 	color: #95A5A6;
 	letter-spacing: 0;
 
@@ -331,13 +334,13 @@ h5{
 
 
 #brennan-name{
-	font-size: 30px;
+	font-size: 16px;
 	font-family: Avenir-Heavy;
 	color: #95A5A6;
 	letter-spacing: 0;
 	color: #ff5377;
 	margin:0;
-	padding:10px;
+	padding-bottom:10px;
 
 }
 
