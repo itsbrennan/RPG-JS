@@ -3,7 +3,7 @@
 
 let player = {
   health:40,
-  power: 3,
+  power: 20,
   heal: 10,
   name: "Your Name",
   attack:0
@@ -16,7 +16,6 @@ let opponent = {
   // losses: 0;
 }
 
-
 // Game increment counters
 // storing loss counters & attacks for both players for summary view
 
@@ -26,19 +25,23 @@ let playerLossCounter = 0;
 
 let playerHealCounter = 2;
 
+const playAgainButton = document.getElementById("playAgain-button");
+
+    playAgainButton.onclick = playAgain = () => {
+      startGame();
+      printToScreen();
+    }
 
 
-// while (opponentLossCounter < 3) {
+const startGameButton = document.getElementById("startGame-button");
 
-//   attack();
-// }
+    startGameButton.onclick = startGame = () => {
 
+    // const startGame = () => { 
 
-const startGame = () => { 
+    printToScreen();
 
-  printToScreen();
-
-  let attackButton = document.getElementById('startGame-button');
+  let attackButton = document.getElementById('attack-button');
   userAnswer = confirm("If you beat Grant Chirpus 3X, you claim the crown. If you lose, you must serve as a surf for the rest of your life. Are you sure you want to continue?");
 
     if (userAnswer === true){
@@ -50,8 +53,7 @@ const startGame = () => {
       let gameMessage = document.getElementById('game-message');
 
       attackButton.disabled = false;
-      healButton.disabled = false;
-
+      // healButton.disabled = false;
 
       enterName();
       // printToScreen();
@@ -70,7 +72,7 @@ const enterName = () => {
 
   player.name = prompt("Enter your name brave fighter!");
   printToScreen();
-  healButton.disabled = false;
+  // healButton.disabled = false;
   
 }
 
@@ -215,7 +217,7 @@ const quitGame = () => {
 
 }
 
-  const fighterPropertyReset = () => {
+const fighterPropertyReset = () => {
 
           // player property reset
           player.health = 40;
@@ -232,10 +234,6 @@ const quitGame = () => {
           }
 
 
-
-// const isTotalLossOver3 = (health) => {
-
-//   return health <= 0;}
 
 
 const printToScreen = () => {
@@ -267,8 +265,8 @@ const printToScreen = () => {
 
    }
 
-
-   gameWon();
+  // Checks if the opponent has 3 losses
+  gameWon();
 
   document.getElementById('player-name').innerText = player.name;
   document.getElementById('player-health').innerText = player.health;
@@ -279,7 +277,7 @@ const printToScreen = () => {
   }
 
 
-printToScreen();
+
 
 
 

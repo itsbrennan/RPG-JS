@@ -6,49 +6,131 @@
 	
 	<!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script> --></head>
 
+
+<header class="header-flex-container">
+	
+		<h5>RPG - JS</h5>
+
+		<img id = "sun" src = "images/sun.svg">
+
+			<!-- game message -->
+
+		
+		<h2 id ="game-message">Ready Player One</h2>
+
+</header>
+
+
 <body>
 
-	<h3>The Mighty Grant Chipus: <span id ="opponent-health">10</span> HP</h3>
+
+	<!-- Name and Sub title -->
+	<section class= "flex-container">
+
+		<div class = "flex-items-left">
+			
+			<h3><span id ="player-health">40</span> HP</h3>
+
+			<p>Total Attacks: <span id = "player-attack-counter"> 0 </span></p>
+
+			<p hidden="true">Total Losses: <span id = "player-loss-counter"> 0 </span></p>
+
+			<p>Heals Remaining: <span id = "heal-counter"> 0 </span></p>
+		
+		</div>
+		
+
+		<div class = "flex-items-right">
+		
+			<h3> <span id ="opponent-health">10</span> HP</h3>
+			
+			<p>Total Attacks: <span id = "opponent-attack-counter"> 0 </span></p>
+
+			<p>Total Losses: <span id = "opponent-loss-counter"> 0 </span></p>
+
+		</div>
+
+	</section>
+
+	<!-- landscape arena -->
+	<section class ="landscape-flex-container">
+
+			<img id = "player-normal" src = "images/player.svg">
+			
+			<img id = "opponent-normal" src = "images/opponent.svg">
+		
+	</section>
+
+
+	<section class="landscape-flex-container">
+
+		<img id = "landscape" src="images/landscape.svg">
+	</section>
 	
-	<p>Total Attacks: <span id = "opponent-attack-counter"> 0 </span></p>
+	
+	
+	<!-- Name and Sub title -->
 
-	<p>Total Losses: <span id = "opponent-loss-counter"> 0 </span></p>
+	<hr class="horizontal-rule">
 
-	<h3><span id = "player-name">Your Name</span>: <span id ="player-health">40</span> HP</h3>
+	<section class="flex-container">
+	
+	<h6><span id = "player-name">Your Name</span> </h6>
 
-	<p>Total Attacks: <span id = "player-attack-counter"> 0 </span></p>
-
-	<p hidden="true">Total Losses: <span id = "player-loss-counter"> 0 </span></p>
-
-	<p>Heals Remaining: <span id = "heal-counter"> 0 </span></p>
 	
 
-	<!-- Primary buttons -->
+	<h6 class = "chirpus-name">The Mighty Grant Chipus</h6>
+
+	</section>
 
 
-	<button id="startGame-button" onclick="startGame()">Want to Play?</button>
+	<div class="sub-head-items">
+		
+		<p><span class ="sub-head">Challenger</span></p>
 
-	<button id="playAgain-button" onclick="startGame()" hidden="true">Want to Play Again?</button>
+		<p><span class ="sub-head">King of the lands</span></p>
 
-	<button id="attack-button" hidden = "true" onclick="startCombat()">Attack</button>
+	</div>
 
-	<button id="heal-button" hidden = "true" onclick="healPlayer()">Heal Player</button>
+	<hr class="horizontal-rule">
 
-	<button id ="restart-button" hidden = "true" onclick="restart()">Fight Again?</button>
 
-	<button id="quit-button" hidden = "true" onclick="quitGame()">Abandon Fight</button>
+	<!-- Primary buttons & Action Dialogue -->
 
-	
-	<!-- game message -->
+	<section class = "engagement-wrapper">
 
-	
-	<h3 id ="game-message"></h3>
+		<button id="startGame-button">Want to Play?</button>
 
+		<button id="playAgain-button" hidden="true">Want to Play Again?</button>
+
+		<button id="attack-button" hidden = "true" onclick="startCombat()">Attack</button>
+
+		<button id="heal-button" hidden = "true" onclick="healPlayer()">Heal Player</button>
+
+		<button id ="restart-button" hidden = "true" onclick="restart()">Fight Again?</button>
+
+		<button id="quit-button" hidden = "true" onclick="quitGame()">Abandon Fight</button>
+
+		<h1 id = "action-dialogue">Are you brave enough to fight The Great Grant Chirpus?</h1>
+
+		<h1 id = "action-button">Click to Play</h1>
+
+	</section>
 
 	<script src="duel.js"></script>
-	<script src="tingle.min.js"></script>
-	<link rel="stylesheet" href="tingle.min.css">
+
 
 </body>
+
+<footer>
+	
+	<hr class="horizontal-rule">
+
+	<h6 class = "footer">Made with love by <span id = "brennan-name"><a href="#">Brennan Martin</a></span></h6>
+
+	<hr class="horizontal-rule">
+
+
+</footer>
 
 </html>

@@ -1,6 +1,289 @@
-/*css*/
-/*
+body{
+margin: 0;
+font-family: Avenir;
+
+}
+
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	
+	font-family: Avenir;
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 1.75;
+	text-align: center;
+	color: #4a4a4a;
+	margin:0;
+	padding: 20px;
+}
+
 
 h3 {
-	color: gray;
-}*/
+	display: inline;
+	font-family: Avenir;
+	font-size: 40px;
+	line-height: 1.33;
+	text-align: left;
+	color: #4a90e2;
+}
+
+
+h5{
+
+	font-family: Avenir;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.71;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #4a4a4a;
+	padding-bottom: 30px;
+
+}
+
+h6 {
+
+	font-family: Avenir;
+	font-size: 30px;
+	font-weight: 500;
+	color: #95A5A6;
+	margin:0;
+}
+
+@media (max-width: 800px) {
+
+h1 {
+	font-size: 30px;
+}
+  
+h2 {
+	
+	font-family: Avenir;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.75;
+	text-align: center;
+	color: #4a4a4a;
+	margin:0;
+	padding: 10px;
+}
+
+
+h3 {
+	display: inline;
+	font-family: Avenir;
+	font-size: 24px;
+	line-height: 1.33;
+	text-align: left;
+	color: #4a90e2;
+}
+
+
+h5{
+
+	font-family: Avenir;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.71;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #4a4a4a;
+	padding-bottom: 30px;
+
+	}
+}
+
+
+.header-flex-container{
+
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+	flex-direction: column;
+	margin:20px;
+}
+
+
+#sun {
+	height: 15vw;
+	flex-direction: row;
+	text-align: center;
+
+
+}
+
+
+#player-health {
+
+	font-family: Avenir;
+	font-size: 80px;
+	font-weight: 900;
+	line-height: 1.0;
+	text-align: left;
+	color: #4a90e2;
+}
+
+#opponent-health {
+
+	font-family: Avenir;
+	font-size: 80px;
+	font-weight: 900;
+	line-height: 1.0;
+	text-align: left;
+	color: #4a90e2;
+}
+
+
+.flex-container {
+
+	margin:20px 20px 0px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+
+}
+
+.flex-item-left{
+	width: 50px;
+	justify-content: flex-start;
+
+}
+
+.flex-item-right{
+	width: 50px;
+	justify-content: flex-end;
+
+}
+
+
+.landscape-flex-container{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+}
+
+
+#player-normal{
+	padding-right: 10vw;
+	height: 7vh;
+	width: 7vw;
+	flex-direction: row;
+	justify-content: flex-start;
+
+}
+
+#opponent-normal {
+	padding-left: 10vw;
+	height: 7vh;
+	width: 7vw;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#landscape{
+	display: flex;
+	justify-content: center;
+	
+}
+
+#landscape {
+	width: 75%;
+	height:10%;
+}
+
+hr.horizontal-rule {
+	border: 1px solid #F2F2F2;
+	width: 100%;
+	padding: 10px, 0, 10px, 0;
+}
+
+
+/*--------------------------------------------------*/
+
+.chirpus-name{
+	color: #ff5377;
+}
+
+
+#player-name{
+	color: #7ed321;
+
+}
+
+.sub-head{
+
+	font-family: Avenir;
+	font-size: 12px;
+	font-style: oblique;
+	text-align: left;
+	color: #95a5a6;
+}
+
+.sub-head-items{
+	margin-left: 40px;
+	margin-right:40px;
+	padding: 0;
+	margin-top: 0px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.engagement-wrapper{
+	margin-left: 40px;
+	margin-right:40px;
+	padding: 0;
+	margin-top: 0px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.footer {
+	padding: 20px;
+	text-align: center;
+}
+
+.footer h6{
+	/* Made with love by Br: */
+	font-family: Avenir-Book;
+	font-weight: 200;
+	font-size: 10px;
+	color: #95A5A6;
+	letter-spacing: 0;
+
+}
+
+
+#brennan-name{
+	font-size: 30px;
+	font-family: Avenir-Heavy;
+	color: #95A5A6;
+	letter-spacing: 0;
+	color: #ff5377;
+	margin:0;
+	padding:10px;
+
+}
+
+
+
+#brennan-name a{
+	text-decoration: none;
+}
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="208px" height="27px" viewBox="0 0 208 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>landscape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-3.5%" y="-26.3%" width="107.0%" height="173.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-2" x="52" y="13" width="96" height="6" rx="3"></rect>
+        <rect id="path-3" x="0" y="3" width="200" height="6" rx="3"></rect>
+        <rect id="path-4" x="36" y="8" width="128" height="6" rx="3"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(-56.000000, -239.000000)">
+            <g id="Group-7" transform="translate(-1.000000, 161.000000)">
+                <g id="Group-10" transform="translate(61.000000, 42.000000)">
+                    <g id="landscape" filter="url(#filter-1)" transform="translate(0.000000, 38.000000)">
+                        <g id="Rectangle-3-Copy-2">
+                            <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <rect stroke="#F2F2F2" stroke-width="1" x="52.5" y="13.5" width="95" height="5" rx="2.5"></rect>
+                        </g>
+                        <g id="Rectangle-3">
+                            <use fill="#7ED321" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <rect stroke="#FFFFFF" stroke-width="1" x="0.5" y="3.5" width="199" height="5" rx="2.5"></rect>
+                        </g>
+                        <g id="Rectangle-3-Copy">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <rect stroke="#F2F2F2" stroke-width="1" x="36.5" y="8.5" width="127" height="5" rx="2.5"></rect>
+                        </g>
+                        <g id="Group-9" transform="translate(17.000000, 0.000000)" fill-rule="nonzero">
+                            <g id="Group-4" transform="translate(0.500000, 0.000000)">
+                                <path d="M7.5,3.21428571 C7.5,2.46920384 6.9061045,1.86511412 6.17359613,1.86511412 C6.15241029,1.86511412 6.13141076,1.86589922 6.11046446,1.86690089 C5.84332593,0.793947251 4.88791378,0 3.74997338,0 C2.67087958,0 1.75632204,0.714192465 1.43672461,1.70300562 C0.638822252,1.73005078 0,2.39608175 0,3.21428571 L7.5,3.21428571 Z" id="Shape" fill="#1EB415"></path>
+                                <path d="M10.1446186,1.78141964 C9.88327818,1.78141964 9.63864046,1.85317016 9.4284147,1.97784012 C9.1613072,0.843632134 8.15231602,0 6.94822402,0 C6.32562605,0 5.75523089,0.225643006 5.3125,0.600285169 C5.67038434,0.927588486 5.93395543,1.35825653 6.05620628,1.84607758 C6.07761515,1.84506042 6.09907841,1.8442632 6.1207321,1.8442632 C6.86941656,1.8442632 7.47642713,2.45768888 7.47642713,3.21428571 L11.5625,3.21428571 C11.5625,2.42294074 10.9276878,1.78141964 10.1446186,1.78141964 Z" id="Shape" fill="#7ED321"></path>
+                            </g>
+                            <g id="Group-4-Copy" transform="translate(153.937500, 0.000000)">
+                                <path d="M7.5,3.21428571 C7.5,2.46920384 6.9061045,1.86511412 6.17359613,1.86511412 C6.15241029,1.86511412 6.13141076,1.86589922 6.11046446,1.86690089 C5.84332593,0.793947251 4.88791378,0 3.74997338,0 C2.67087958,0 1.75632204,0.714192465 1.43672461,1.70300562 C0.638822252,1.73005078 0,2.39608175 0,3.21428571 L7.5,3.21428571 Z" id="Shape" fill="#1EB415"></path>
+                                <path d="M10.1446186,1.78141964 C9.88327818,1.78141964 9.63864046,1.85317016 9.4284147,1.97784012 C9.1613072,0.843632134 8.15231602,0 6.94822402,0 C6.32562605,0 5.75523089,0.225643006 5.3125,0.600285169 C5.67038434,0.927588486 5.93395543,1.35825653 6.05620628,1.84607758 C6.07761515,1.84506042 6.09907841,1.8442632 6.1207321,1.8442632 C6.86941656,1.8442632 7.47642713,2.45768888 7.47642713,3.21428571 L11.5625,3.21428571 C11.5625,2.42294074 10.9276878,1.78141964 10.1446186,1.78141964 Z" id="Shape" fill="#7ED321"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
