@@ -37,12 +37,10 @@ const startGameButton = document.getElementById("startGame-button");
 
     startGameButton.onclick = startGame = () => {
 
-
-
     printToScreen();
 
-  let attackButton = document.getElementById('attack-button');
-  userAnswer = confirm("If you beat Grant Chirpus 3X, you claim the crown. If you lose, you must serve as a surf for the rest of your life. Are you sure you want to continue?");
+    let attackButton = document.getElementById('attack-button');
+        userAnswer = confirm("If you beat Grant Chirpus 3X, you claim the crown. If you lose, you must serve as a surf for the rest of your life. Are you sure you want to continue?");
 
     if (userAnswer === true){
 
@@ -54,12 +52,10 @@ const startGameButton = document.getElementById("startGame-button");
       let playAgainButton = document.getElementById('playAgain-button').hidden = true;
       let gameMessage = document.getElementById('game-message');
 
-
       attackButton.disabled = false;
-      // healButton.disabled = false;
 
       enterName();
-      // printToScreen();
+      
 
     } else {
 
@@ -69,29 +65,24 @@ const startGameButton = document.getElementById("startGame-button");
 
 }
 
-
 // name prompt 
 const enterName = () => {
 
   player.name = prompt("Enter your name brave fighter!");
   printToScreen();
-  // healButton.disabled = false;
   
 }
 
-
-
-
 const startCombat = () => {
-
-  
 
   let attackButton = document.getElementById('attack-button');
   let restartButton = document.getElementById('restart-button');
   let gameMessage = document.getElementById('game-message');
+  gameMessage.innerText = "Ready Player One?"
   let healButton = document.getElementById('heal-button');
 
   // Player's attack power is being defined and then subtracted to the opponents health
+  
   let playerAttack = determineAttackPower(player.power);
     opponent.health -= playerAttack;
     player.attack++;
@@ -106,7 +97,6 @@ const startCombat = () => {
     }
 
     attackButton.disabled = true;
-    healButton.disabled = true;
     gameMessage.innerText = "Take that!!";
 
     // Opponent strikes back with 1 second timeout for realistic feel :)
@@ -128,26 +118,20 @@ const startCombat = () => {
           let quitButton = document.getElementById('quit-button').hidden = true;
           fighterPropertyReset();
           
-
           printToScreen();
-
 
         // storing loss counter for game summary
         return playerLossCounter++;
 
     }
-      healButton.disabled = false;
-      attackButton.disabled = false;
-    
-    // this is where the delay is defined
-    }, 500);
-
     healButton.disabled = false;
     attackButton.disabled = false;
+    
+    // this is where the delay is defined
+    
+    }, 700);    
 
 }
-
-
 
 
 const endGame = (message) => {
@@ -162,24 +146,29 @@ const determineAttackPower = (power) => {
     return Math.floor(Math.random() * power +1); }
 
 
+  // Heal Counter and Healing Player
 
 const healPlayer = () =>{
   
   // Why does this if need to be defined at 1 instead of 2?
 
   if (playerHealCounter >= 1){
-    let playerHeal = determineHeal(player.heal);
+      playerHeal = determineHeal(player.heal);
       player.health += playerHeal;
       playerHealCounter--;
-    } else {
+    }
+    printToScreen();
+    determineHealCount();
+}
 
-      let healButton = document.getElementById('heal-button').disabled = true;
-      healButton.hidden = true;
+const determineHealCount = () => {
 
+  if (playerHealCounter === 0){
+      healButton = document.getElementById('heal-button').hidden = true;
     }
 
-    printToScreen();
 }
+
 
 const determineHeal = (heal) => { 
 
@@ -204,7 +193,9 @@ const restart = () => {
   healButton.hidden = false;
 
   document.getElementById('restart-button').hidden = true;
-  printToScreen();}
+  printToScreen();
+
+}
 
 
 const quitGame = () => {
@@ -235,8 +226,6 @@ const fighterPropertyReset = () => {
           opponentLossCounter =0;
 
           }
-
-
 
 
 const printToScreen = () => {
@@ -270,6 +259,7 @@ const printToScreen = () => {
 
   // Checks if the opponent has 3 losses
   gameWon();
+  determineHealCount();
 
   document.getElementById('player-name').innerText = player.name;
   document.getElementById('player-health').innerText = player.health;
@@ -277,11 +267,5 @@ const printToScreen = () => {
   document.getElementById('heal-counter').innerText = playerHealCounter;
   document.getElementById('player-attack-counter').innerText = player.attack;
 
-
   }
-
-
-
-
-
 
